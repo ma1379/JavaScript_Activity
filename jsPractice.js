@@ -1,20 +1,20 @@
-let grade1 = prompt("Grade of test 1")
-let grade2 = prompt("Grade of test 2")
-let grade3 = prompt("Grade of test 3")
-grade1 = parseFloat(grade1)
-grade2 = parseFloat(grade2)
-grade3 = parseFloat(grade3)
-let letterGrade = ""
-let average = (grade1 + grade2 + grade3) / 3
-if(average >= 92.5) {
-    letterGrade = "A"
-} else if(average >= 84.5) {
-    letterGrade = "B"
-} else if(average >= 77.5) {
-    letterGrade = "C"
-} else if(average >= 69.5) {
-    letterGrade = "D"
-} else{
-    letterGrade = "F"
+let numPeople = prompt("How many people do you know?")
+numPeople = parseInt(numPeople)
+const fullNames = []
+const firstNames = []
+const lastNames = []
+for(let i = 0; i < numPeople; i++) {
+let personName = prompt("Input name of person " + (i + 1) + " (First,Last)")
+fullNames.push(personName)
+let commaIndex = personName.lastIndexOf(',')
+lastNames.push(personNames.substring(commaIndex+1))
 }
-console.log("Your average test score is " + average + " and your letter grade is " + letterGrade + ".")
+let longestNameLength = 0
+let longestLastNameLength = 0;
+let longestLastNameIndex = -1
+let shortestNameLength = 9999
+for(let i = 0; i < numPeople; i++) {
+    if(fullNames[i].length > longestNameLength) {
+        longestNameLength = fullNames[i].length
+    }
+}
