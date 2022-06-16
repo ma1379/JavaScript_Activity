@@ -40,19 +40,24 @@ for ( var i = 0 ; i < peopleknown ; i++){
 }
 
 
-var longesttnamelength = 0
-let longestname = ""
 
-const lastnames = []
+function makeLastNames ( names ){
+ for ( var i = 0 ; i < names.length ; i++ ){
+    longestnamelength = parseInt(0)
+   if ( names[i].length > longestnamelength ){
+      longestnamelength = names[i].length
+      longestname = names[i]  
+   }
 
-for (var i = 0; i < names.length; i++) { 
-      lastnames[i] = names[i].lastIndexOf(',')
-     if ( lastnames[i].length > longesttnamelength ){
-        longestname = lastnames[i]
-     }
-    
-     console.log(names)
-     console.log(lastnames)
-     console.log(longestname)
- 
+ return (longestname)
 }
+}
+
+console.log(makeLastNames.apply(names))
+     console.log(names)
+
+
+     
+
+ 
+
