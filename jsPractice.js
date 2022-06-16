@@ -29,25 +29,30 @@ if ( grade > 92.5 ){
 } else {
     console.log("F" + grade)
 }*/
+var pk = prompt("How many people do you know?")
+peopleknown = parseInt(pk)
 
-var n1 = prompt("Enter in the #1 name")
-var n2 = prompt("Enter in the #2 name")
-var n3 = prompt("Enter in the #3 name")
+const names = [ ]
 
-const names = [ n1 , n2 , n3 ]
-const length = [ n1.length , n2.length , n3.length ]
+for ( var i = 0 ; i < peopleknown ; i++){
+   var n = prompt("Enter in the full name as such : John,Smith ")
+   names[i] = n  
+}
 
-console.log(names)
-console.log(length)
 
-var longest = parseInt(0) 
-var longesttname = ""
+var longesttnamelength = 0
+let longestname = ""
+
+const lastnames = []
 
 for (var i = 0; i < names.length; i++) { 
-   if ( names[i].length > longest)
-          names[i].length = longest 
-          longestname = name[i]
-          longest = name[i].length
-    }
-
-    console.log( longestname , longest )
+      lastnames[i] = names[i].lastIndexOf(',')
+     if ( lastnames[i].length > longesttnamelength ){
+        longestname = lastnames[i]
+     }
+    
+     console.log(names)
+     console.log(lastnames)
+     console.log(longestname)
+ 
+}
