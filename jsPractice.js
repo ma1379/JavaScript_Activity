@@ -38,18 +38,25 @@ for(let count=0;count<people;count=count+1)
     names.push(name)
 }
 
-let longestlastName=names[0].substring(names.indexOf(" ")+1)
-for(let count=0;count<people;count=count+1)
+
+
+console.log(flash(names))
+function flash(listNames)
 {
-    if(names[count].substring(names.indexOf(" ")+1).length>=longestlastName.length)
+    let longestlastName=names[0].substring(names.indexOf(" ")+1)
+    for(let count=0;count<people;count=count+1)
     {
-        longestlastName=names[count]
+        if(names[count].substring(names.indexOf(" ")+1).length>=longestlastName.length)
+        {
+            longestlastName=names[count]
+        }
     }
 }
-console.log("The longest name is "+longestlastName)
-
-let shortestName=names[0]
-let longestName=names[0]
+console.log(Beast(names))
+function Beast(listNames)
+{ 
+   let shortestName=names[0]
+   let longestName=names[0]
 for(let count=0;count<people;count=count+1)
 {
     if(names[count].length<=shortestName.length)
@@ -61,7 +68,10 @@ for(let count=0;count<people;count=count+1)
         longestName=names[count]
     }
 }
-console.log("The range of lengths of the names "+(longestName.length-shortestName.length))
+let range=longestName.length-shortestName.length
+return range
+}
+
 
 for(let count=0;count<people;count=count+1)
 {
